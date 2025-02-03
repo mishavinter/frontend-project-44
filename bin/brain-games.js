@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-console.log('Welcome to the Brain Games!');
+import helloUser from '../src/cli.js';
 
-import helloUser from "../src/cli.js";
+console.log('Welcome to the Brain Games!');
 
 helloUser();
