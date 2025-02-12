@@ -10,7 +10,7 @@ const brainProgression = () => {
   
   for (let i = 1; i <= 3; i += 1) {
     let firstNumber = Math.floor(100 * Math.random());
-    let diff = Math.floor(31 * Math.random());
+    let diff = Math.ceil(31 * Math.random());
     const progression = [];
     const progressionLength = 10;
   
