@@ -1,39 +1,26 @@
-import readlineSync from 'readline-sync';
+import mainEngine from "../index.js";
 
-const brainProgression = () => {
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
-
-  console.log('What number is missing in the progression?');
-
-  let correctAnswer = 0;
+const description = 'What number is missing in the progression?';
   
-  for (let i = 1; i <= 3; i += 1) {
-    let firstNumber = Math.floor(100 * Math.random());
-    let diff = Math.ceil(31 * Math.random());
-    const progression = [];
-    const progressionLength = 10;
+const generateGameData = () => {
+  const firstNumber = Math.floor(100 * Math.random());
+  const diff = Math.ceil(31 * Math.random());
+  const progression = [];
+  const progressionLength = 10;
   
-    for (let i = 0; i < progressionLength; i += 1) {
-      progression.push(firstNumber + (i * diff));
-    }
-
-    const indexOfHiddenNumber = Math.floor(progressionLength * Math.random());
-    correctAnswer = progression[indexOfHiddenNumber];
-    progression[indexOfHiddenNumber] = '..';
-  
-    console.log(`Question: ${progression.join(' ')}`);
-    let answer = readlineSync.question('Your answer: ');
-  
-    if (answer === correctAnswer.toString()) {
-      console.log(`Correct!`);
-    } else {
-      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.
-Let's try again, ${userName}!`);
-    }
+  for (let i = 0; i < progressionLength; i += 1) {
+    progression.push(firstNumber + (i * diff));
   }
 
-  return console.log(`Congratulations, ${userName}!`);
+  const indexOfHiddenNumber = Math.floor(progressionLength * Math.random());
+  const correctAnswer = progression[indexOfHiddenNumber].toString();
+  progression[indexOfHiddenNumber] = '..';
+
+  const question = progression.join(' ');
+
+  return [question, correctAnswer];
 };
+
+const brainProgression = () => mainEngine(generateGameData, description);
 
 export default brainProgression;
