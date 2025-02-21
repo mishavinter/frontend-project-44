@@ -1,39 +1,21 @@
-import readlineSync from 'readline-sync';
+import mainEngine from "../index.js";
 
-const brainPrime = () => {
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+let correctAnswer = 'yes';
+  
+const generateGameData = () => {
+  const question = Math.floor(200 * Math.random());
 
-  let correctAnswer = '';
-  
-  for (let i = 1; i <= 3; i += 1) {
-    const number = Math.floor(200 * Math.random());
-  
-    let j = 2;
-    while (j <= number / 2) {
-      if (number % j === 0) {
-        correctAnswer = 'no';
-        j = number;
-      } else {
-        correctAnswer = 'yes';
-        j += 1;
-      }
-    }
-  
-    console.log(`Question: ${number}`);
-    let answer = readlineSync.question('Your answer: ');
-  
-    if (answer === correctAnswer) {
-      console.log(`Correct!`);
-    } else {
-      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.
-Let's try again, ${userName}!`);
-    }
+  for (let i = 2; i <= question / 2; i += 1) {
+    if (question % i === 0) {
+      correctAnswer = 'no';
+     }
   }
 
-  return console.log(`Congratulations, ${userName}!`);
+return [question, correctAnswer];
 };
+
+const brainPrime = () => mainEngine(generateGameData, description);
 
 export default brainPrime;
