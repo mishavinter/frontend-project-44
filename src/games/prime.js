@@ -7,10 +7,13 @@ let correctAnswer = 'yes';
 const generateGameData = () => {
   const question = Math.floor(200 * Math.random());
 
-  for (let i = 2; i <= question / 2; i += 1) {
+  let i = 2;
+  while (i <= question / 2) {
     if (question % i === 0) {
       correctAnswer = 'no';
+      i += 200;
     }
+    i += 1;
   }
 
   return [question, correctAnswer];
