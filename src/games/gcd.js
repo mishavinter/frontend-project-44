@@ -9,12 +9,19 @@ const generateGameData = () => {
   const secondNumber = Math.floor(100 * Math.random());
 
   const minNumber = Math.min(firstNumber, secondNumber);
+  const maxNumber = Math.max(firstNumber, secondNumber);
 
   const question = `${firstNumber} ${secondNumber}`;
 
-  for (let i = 1; i <= minNumber / 2; i += 1) {
-    if (firstNumber % i === 0 && secondNumber % i === 0) {
-      correctAnswer = i;
+  if (minNumber === 0) {
+    correctAnswer = maxNumber;
+  } else if (maxNumber % minNumber === 0) {
+    correctAnswer = minNumber;
+  } else {
+    for (let i = 1; i <= minNumber / 2; i += 1) {
+      if (firstNumber % i === 0 && secondNumber % i === 0) {
+        correctAnswer = i;
+      }
     }
   }
 
