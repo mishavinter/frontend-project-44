@@ -6,7 +6,11 @@ let correctAnswer = '';
 
 const generateGameData = () => {
   const question = Math.floor(100 * Math.random());
-  (question % 2 === 0) ? correctAnswer = 'yes' : correctAnswer = 'no';
+  if (question % 2 === 0) {
+    correctAnswer = 'yes';
+  } else {
+    correctAnswer = 'no';
+  }
 
   return [question, correctAnswer];
 };
