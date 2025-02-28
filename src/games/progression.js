@@ -1,10 +1,10 @@
-import mainEngine from '../index.js';
+import { mainEngine, getRandomNumber } from '../index.js';
 
 const description = 'What number is missing in the progression?';
 
 const generateGameData = () => {
-  const firstNumber = Math.floor(100 * Math.random());
-  const diff = Math.ceil(31 * Math.random());
+  const firstNumber = getRandomNumber(0, 100);
+  const diff = getRandomNumber(1, 30);
   const progression = [];
   const progressionLength = 10;
 

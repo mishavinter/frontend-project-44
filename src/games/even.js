@@ -1,11 +1,11 @@
-import mainEngine from '../index.js';
+import { mainEngine, getRandomNumber } from '../index.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 let correctAnswer = '';
 
 const generateGameData = () => {
-  const question = Math.floor(100 * Math.random());
+  const question = getRandomNumber(0, 100);
   if (question % 2 === 0) {
     correctAnswer = 'yes';
   } else {

@@ -1,12 +1,12 @@
-import mainEngine from '../index.js';
+import { mainEngine, getRandomNumber } from '../index.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
 let correctAnswer = 0;
 
 const generateGameData = () => {
-  const firstNumber = Math.floor(100 * Math.random());
-  const secondNumber = Math.floor(100 * Math.random());
+  const firstNumber = getRandomNumber(0, 100);
+  const secondNumber = getRandomNumber(0, 100);
 
   const minNumber = Math.min(firstNumber, secondNumber);
   const maxNumber = Math.max(firstNumber, secondNumber);

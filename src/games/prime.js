@@ -1,11 +1,11 @@
-import mainEngine from '../index.js';
+import { mainEngine, getRandomNumber } from '../index.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 let correctAnswer = 'yes';
 
 const generateGameData = () => {
-  const question = Math.floor(200 * Math.random() + 2);
+  const question = getRandomNumber(2, 200);
 
   if (question <= 3) {
     correctAnswer = 'yes';

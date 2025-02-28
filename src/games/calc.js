@@ -1,4 +1,4 @@
-import mainEngine from '../index.js';
+import { mainEngine, getRandomNumber } from '../index.js';
 
 const description = 'What is the result of the expression?';
 
@@ -6,8 +6,8 @@ const signArray = ['+', '-', '*'];
 let correctAnswer = 0;
 
 const generateGameData = () => {
-  const firstNumber = Math.floor(100 * Math.random());
-  const secondNumber = Math.floor(100 * Math.random());
+  const firstNumber = getRandomNumber(0, 100);
+  const secondNumber = getRandomNumber(0, 100);
   const sign = signArray[Math.floor(signArray.length * Math.random())];
 
   const question = `${firstNumber} ${sign} ${secondNumber}`;
