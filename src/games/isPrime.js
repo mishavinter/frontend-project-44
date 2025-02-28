@@ -7,7 +7,10 @@ let correctAnswer = '';
 const generateGameData = () => {
   const question = getRandomNumber(2, 200);
 
-  isPrime(question) ? correctAnswer = 'yes' : correctAnswer = 'no';
+  if (isPrime(question)) {
+    correctAnswer = 'yes';
+  }
+  correctAnswer = 'no';
 
   return [question, correctAnswer];
 };
