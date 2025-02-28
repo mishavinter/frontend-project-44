@@ -23,6 +23,6 @@ const generateGameData = () => {
   return [question, correctAnswer];
 };
 
-const brainPrime = () => mainEngine(generateGameData, description);
+const isPrime = () => mainEngine(generateGameData, description);
 
-export default brainPrime;
+export default isPrime;

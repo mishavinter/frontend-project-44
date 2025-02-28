@@ -29,6 +29,6 @@ const generateGameData = () => {
   return [question, correctAnswer];
 };
 
-const brainCalc = () => mainEngine(generateGameData, description);
+const calculate = () => mainEngine(generateGameData, description);
 
-export default brainCalc;
+export default calculate;

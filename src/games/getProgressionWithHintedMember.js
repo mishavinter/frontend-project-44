@@ -21,6 +21,6 @@ const generateGameData = () => {
   return [question, correctAnswer];
 };
 
-const brainProgression = () => mainEngine(generateGameData, description);
+const getProgressionWithHintedMember = () => mainEngine(generateGameData, description);
 
-export default brainProgression;
+export default getProgressionWithHintedMember;

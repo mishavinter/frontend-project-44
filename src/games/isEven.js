@@ -15,6 +15,6 @@ const generateGameData = () => {
   return [question, correctAnswer];
 };
 
-const brainEven = () => mainEngine(generateGameData, description);
+const isEven = () => mainEngine(generateGameData, description);
 
-export default brainEven;
+export default isEven;
