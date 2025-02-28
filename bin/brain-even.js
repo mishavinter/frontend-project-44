@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import isEven from '../src/games/isEven.js';
+import sayEvenOrNot from '../src/games/isEven.js';
 
-isEven();
+sayEvenOrNot();

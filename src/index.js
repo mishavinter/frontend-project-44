@@ -27,6 +27,13 @@ Let's try again, ${userName}!`);
 
 const getRandomNumber = (min, max) => Math.floor((max - min) * Math.random() + min);
 
+const isEven = (num) => {
+  if (num % 2 === 0) {
+    return true;
+  }
+  return false;
+};
+
 const isPrime = (num) => {
   if (num < 2) {
     return false;
@@ -46,4 +53,4 @@ const isPrime = (num) => {
   return true;
 };
 
-export { mainEngine, getRandomNumber, isPrime };
+export { mainEngine, getRandomNumber, isEven, isPrime };

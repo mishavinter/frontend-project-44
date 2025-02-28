@@ -1,4 +1,4 @@
-import { mainEngine, getRandomNumber } from '../index.js';
+import { mainEngine, getRandomNumber, isEven } from '../index.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -6,15 +6,15 @@ let correctAnswer = '';
 
 const generateGameData = () => {
   const question = getRandomNumber(0, 100);
-  if (question % 2 === 0) {
+  if (isEven(question)) {
     correctAnswer = 'yes';
   } else {
     correctAnswer = 'no';
   }
-
+  
   return [question, correctAnswer];
 };
 
-const isEven = () => mainEngine(generateGameData, description);
+const sayEvenOrNot = () => mainEngine(generateGameData, description);
 
-export default isEven;
+export default sayEvenOrNot;
