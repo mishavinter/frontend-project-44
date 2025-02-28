@@ -9,8 +9,9 @@ const generateGameData = () => {
 
   if (isPrime(question)) {
     correctAnswer = 'yes';
+  } else {
+    correctAnswer = 'no';
   }
-  correctAnswer = 'no';
 
   return [question, correctAnswer];
 };
