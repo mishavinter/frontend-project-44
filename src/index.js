@@ -25,6 +25,6 @@ Let's try again, ${userName}!`);
   return console.log(`Congratulations, ${userName}!`);
 };
 
-const getRandomNumber = (min, max) => Math.floor(max * Math.random() + min);
+const getRandomNumber = (min, max) => Math.floor((max - min) * Math.random() + min);
 
 export { mainEngine, getRandomNumber };
