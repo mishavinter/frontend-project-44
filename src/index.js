@@ -27,4 +27,22 @@ Let's try again, ${userName}!`);
 
 const getRandomNumber = (min, max) => Math.floor((max - min) * Math.random() + min);
 
-export { mainEngine, getRandomNumber };
+const isPrime = (num) => {
+  if (num < 2) {
+    return false;
+  } else if (num === 2) {
+    return true;
+  } else {
+    let i = 2;
+    while (i <= num / 2) {
+      if (num % i !== 0) {
+        i += 1;
+      } else {
+        return false;
+      }
+    }
+  }
+  return true;
+};
+
+export { mainEngine, getRandomNumber, isPrime };
