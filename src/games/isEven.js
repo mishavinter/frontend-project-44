@@ -11,7 +11,7 @@ const generateGameData = () => {
   } else {
     correctAnswer = 'no';
   }
-  
+
   return [question, correctAnswer];
 };
 

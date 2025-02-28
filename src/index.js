@@ -53,4 +53,6 @@ const isPrime = (num) => {
   return true;
 };
 
-export { mainEngine, getRandomNumber, isEven, isPrime };
+export {
+  mainEngine, getRandomNumber, isEven, isPrime,
+};
