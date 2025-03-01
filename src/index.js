@@ -71,6 +71,29 @@ const getGCD = (num1, num2) => {
   return GCD.toString();
 };
 
+const getProgression = (length) => {
+  const firstNumber = getRandomNumber(0, 100);
+  const diff = getRandomNumber(1, 30);
+  const progression = [];
+
+  for (let i = 0; i < length; i += 1) {
+    progression.push(firstNumber + (i * diff));
+  }
+
+  return progression;
+};
+
+const hideProgressionMember = (progression, index) => {
+  progression[index] = '..';
+
+  return progression;
+};
+
 export {
-  mainEngine, getRandomNumber, isEven, isPrime, getGCD,
+  mainEngine,
+  getRandomNumber,
+  isEven,
+  isPrime,
+  getGCD,
+  getProgression, hideProgressionMember,
 };

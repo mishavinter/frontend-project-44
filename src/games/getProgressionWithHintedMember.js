@@ -1,22 +1,15 @@
-import { mainEngine, getRandomNumber } from '../index.js';
+import { mainEngine, getRandomNumber, getProgression, hideProgressionMember } from '../index.js';
 
 const description = 'What number is missing in the progression?';
 
 const generateGameData = () => {
-  const firstNumber = getRandomNumber(0, 100);
-  const diff = getRandomNumber(1, 30);
-  const progression = [];
-  const progressionLength = 10;
+  const progression = getProgression(10);
 
-  for (let i = 0; i < progressionLength; i += 1) {
-    progression.push(firstNumber + (i * diff));
-  }
+  const index = getRandomNumber(0, progression.length);
+  const correctAnswer = progression[index].toString();
 
-  const indexOfHiddenNumber = Math.floor(progressionLength * Math.random());
-  const correctAnswer = progression[indexOfHiddenNumber].toString();
-  progression[indexOfHiddenNumber] = '..';
-
-  const question = progression.join(' ');
+  const progressionWithHintedMember = hideProgressionMember(progression, index);
+  const question = progressionWithHintedMember.join(' ');
 
   return [question, correctAnswer];
 };
