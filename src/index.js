@@ -84,7 +84,8 @@ const getProgression = (length) => {
 };
 
 const hideProgressionMember = (progression, index) => {
-  progression[index] = '..';
+  const newProgression = progression;
+  newProgression[index] = '..';
 
   return progression;
 };

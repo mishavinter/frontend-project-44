@@ -1,4 +1,6 @@
-import { mainEngine, getRandomNumber, getProgression, hideProgressionMember } from '../index.js';
+import {
+  mainEngine, getRandomNumber, getProgression, hideProgressionMember,
+} from '../index.js';
 
 const description = 'What number is missing in the progression?';
 
