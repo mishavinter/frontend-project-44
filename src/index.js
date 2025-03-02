@@ -90,6 +90,12 @@ const hideProgressionMember = (progression, index) => {
   return progression;
 };
 
+const getOperator = () => {
+  const signArray = ['+', '-', '*'];
+  const sign = signArray[getRandomNumber(0, signArray.length - 1)];
+  return sign;
+};
+
 export {
   mainEngine,
   getRandomNumber,
@@ -97,4 +103,5 @@ export {
   isPrime,
   getGCD,
   getProgression, hideProgressionMember,
+  getOperator,
 };

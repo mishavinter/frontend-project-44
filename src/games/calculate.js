@@ -1,14 +1,13 @@
-import { mainEngine, getRandomNumber } from '../index.js';
+import { mainEngine, getRandomNumber, getOperator } from '../index.js';
 
 const description = 'What is the result of the expression?';
 
-const signArray = ['+', '-', '*'];
 let correctAnswer = 0;
 
 const generateGameData = () => {
   const firstNumber = getRandomNumber(0, 100);
   const secondNumber = getRandomNumber(0, 100);
-  const sign = signArray[Math.floor(signArray.length * Math.random())];
+  const sign = getOperator();
 
   const question = `${firstNumber} ${sign} ${secondNumber}`;
 
@@ -21,8 +20,12 @@ const generateGameData = () => {
       correctAnswer = firstNumber - secondNumber;
       break;
 
-    default:
+    case '*':
       correctAnswer = firstNumber * secondNumber;
+      break;
+
+    default:
+      throw new Error('unknown operator');
   }
   correctAnswer = correctAnswer.toString();
 
