@@ -92,7 +92,7 @@ const hideProgressionMember = (progression, index) => {
 
 const getOperator = () => {
   const signArray = ['+', '-', '*'];
-  const sign = signArray[getRandomNumber(0, signArray.length - 1)];
+  const sign = signArray[getRandomNumber(0, signArray.length)];
   return sign;
 };
 
