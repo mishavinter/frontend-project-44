@@ -1,4 +1,29 @@
-import { mainEngine, getRandomNumber, getOperator } from '../index.js';
+import { mainEngine, getRandomNumber } from '../index.js';
+
+const getOperator = () => {
+  const signArray = ['+', '-', '*'];
+  const sign = signArray[getRandomNumber(0, signArray.length)];
+  return sign;
+};
+
+const estimateResult = (num1, num2, sign) => {
+  switch (sign) {
+    case '+':
+      return num1 + num2;
+      break;
+
+    case '-':
+      return num1 - num2;
+      break;
+
+    case '*':
+      return num1 * num2;
+      break;
+
+    default:
+      throw new Error('unknown operator');
+  }
+};
 
 const description = 'What is the result of the expression?';
 
@@ -11,23 +36,7 @@ const generateGameData = () => {
 
   const question = `${firstNumber} ${sign} ${secondNumber}`;
 
-  switch (sign) {
-    case '+':
-      correctAnswer = firstNumber + secondNumber;
-      break;
-
-    case '-':
-      correctAnswer = firstNumber - secondNumber;
-      break;
-
-    case '*':
-      correctAnswer = firstNumber * secondNumber;
-      break;
-
-    default:
-      throw new Error('unknown operator');
-  }
-  correctAnswer = correctAnswer.toString();
+  correctAnswer = estimateResult(firstNumber, secondNumber, sign).toString();
 
   return [question, correctAnswer];
 };
