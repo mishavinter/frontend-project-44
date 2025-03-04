@@ -1,4 +1,4 @@
-import { mainEngine, getRandomNumber } from '../index.js';
+import { launchGameEngine, getRandomNumber } from '../index.js';
 
 const getOperator = () => {
   const signArray = ['+', '-', '*'];
@@ -38,6 +38,6 @@ const generateGameData = () => {
   return [question, correctAnswer];
 };
 
-const calculate = () => mainEngine(generateGameData, description);
+const calculate = () => launchGameEngine(generateGameData, description);
 
 export default calculate;

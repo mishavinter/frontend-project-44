@@ -1,4 +1,4 @@
-import { mainEngine, getRandomNumber } from '../index.js';
+import { launchGameEngine, getRandomNumber } from '../index.js';
 
 const isPrime = (num) => {
   if (num < 2) {
@@ -35,6 +35,6 @@ const generateGameData = () => {
   return [question, correctAnswer];
 };
 
-const sayPrimeOrNot = () => mainEngine(generateGameData, description);
+const sayPrimeOrNot = () => launchGameEngine(generateGameData, description);
 
 export default sayPrimeOrNot;

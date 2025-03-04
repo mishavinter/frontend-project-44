@@ -1,4 +1,4 @@
-import { mainEngine, getRandomNumber } from '../index.js';
+import { launchGameEngine, getRandomNumber } from '../index.js';
 
 const isEven = (num) => {
   if (num % 2 === 0) {
@@ -22,6 +22,6 @@ const generateGameData = () => {
   return [question, correctAnswer];
 };
 
-const sayEvenOrNot = () => mainEngine(generateGameData, description);
+const sayEvenOrNot = () => launchGameEngine(generateGameData, description);
 
 export default sayEvenOrNot;

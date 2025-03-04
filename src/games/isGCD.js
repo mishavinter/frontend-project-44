@@ -1,4 +1,4 @@
-import { mainEngine, getRandomNumber } from '../index.js';
+import { launchGameEngine, getRandomNumber } from '../index.js';
 
 const getGCD = (num1, num2) => {
   const minNumber = Math.min(num1, num2);
@@ -33,6 +33,6 @@ const generateGameData = () => {
   return [question, correctAnswer];
 };
 
-const isGCD = () => mainEngine(generateGameData, description);
+const isGCD = () => launchGameEngine(generateGameData, description);
 
 export default isGCD;

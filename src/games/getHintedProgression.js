@@ -1,4 +1,4 @@
-import { mainEngine, getRandomNumber } from '../index.js';
+import { launchGameEngine, getRandomNumber } from '../index.js';
 
 const getProgression = (length) => {
   const firstNumber = getRandomNumber(0, 100);
@@ -33,6 +33,6 @@ const generateGameData = () => {
   return [question, correctAnswer];
 };
 
-const getHintedProgression = () => mainEngine(generateGameData, description);
+const getHintedProgression = () => launchGameEngine(generateGameData, description);
 
 export default getHintedProgression;
