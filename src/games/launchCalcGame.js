@@ -38,6 +38,6 @@ const generateGameData = () => {
   return [question, correctAnswer];
 };
 
-const calculate = () => launchGameEngine(generateGameData, description);
+const launchCalcGame = () => launchGameEngine(generateGameData, description);
 
-export default calculate;
+export default launchCalcGame;
