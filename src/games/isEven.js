@@ -1,4 +1,11 @@
-import { mainEngine, getRandomNumber, isEven } from '../index.js';
+import { mainEngine, getRandomNumber } from '../index.js';
+
+const isEven = (num) => {
+  if (num % 2 === 0) {
+    return true;
+  }
+  return false;
+};
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
