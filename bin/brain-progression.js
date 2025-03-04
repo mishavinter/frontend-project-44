@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import getProgressionWithHintedMember from '../src/games/getProgressionWithHintedMember.js';
+import getHintedProgression from '../src/games/getHintedProgression.js';
 
-getProgressionWithHintedMember();
+getHintedProgression();

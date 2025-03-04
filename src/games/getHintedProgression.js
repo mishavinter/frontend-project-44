@@ -16,6 +16,6 @@ const generateGameData = () => {
   return [question, correctAnswer];
 };
 
-const getProgressionWithHintedMember = () => mainEngine(generateGameData, description);
+const getHintedProgression = () => mainEngine(generateGameData, description);
 
-export default getProgressionWithHintedMember;
+export default getHintedProgression;
