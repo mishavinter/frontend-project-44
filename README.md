@@ -1,5 +1,11 @@
 # BrainGames - Игры разума
 
+## Hexlet tests and linter status:
+[![Actions Status](https://github.com/mishavinter/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/mishavinter/frontend-project-44/actions)
+
+## CodeClimate Maintainability Badge
+[![Maintainability](https://api.codeclimate.com/v1/badges/b791cedb8454390d4916/maintainability)](https://codeclimate.com/github/mishavinter/frontend-project-44/maintainability)
+
 ## Описание
 Проект представляет собой пять мини-игр, запускаемых из терминала:
 - Проверка на чётность;
@@ -34,9 +40,3 @@
 - Игра "Калькулятор"
 [![asciicast](https://asciinema.org/a/8ukYigGWvTIocnR50RTlst0sw.svg)](https://asciinema.org/a/8ukYigGWvTIocnR50RTlst0sw)
 [![asciicast](https://asciinema.org/a/ylKBMzf6HYSqOpeygBbpWsn9h.svg)](https://asciinema.org/a/ylKBMzf6HYSqOpeygBbpWsn9h)
-
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/mishavinter/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/mishavinter/frontend-project-44/actions)
-
-### CodeClimate Maintainability Badge
-[![Maintainability](https://api.codeclimate.com/v1/badges/b791cedb8454390d4916/maintainability)](https://codeclimate.com/github/mishavinter/frontend-project-44/maintainability)
