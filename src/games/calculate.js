@@ -10,15 +10,12 @@ const estimateResult = (num1, num2, sign) => {
   switch (sign) {
     case '+':
       return num1 + num2;
-      break;
 
     case '-':
       return num1 - num2;
-      break;
 
     case '*':
       return num1 * num2;
-      break;
 
     default:
       throw new Error('unknown operator');
