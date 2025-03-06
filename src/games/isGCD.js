@@ -4,19 +4,19 @@ import getRandomNumber from '../getRandomNumber.js';
 const getGCD = (num1, num2) => {
   const minNumber = Math.min(num1, num2);
   const maxNumber = Math.max(num1, num2);
-  let GCD = 1;
+  let gcd = 1;
   if (minNumber === 0) {
-    GCD = maxNumber;
+    gcd = maxNumber;
   } else if (maxNumber % minNumber === 0) {
-    GCD = minNumber;
+    gcd = minNumber;
   } else {
     for (let i = 1; i <= minNumber / 2; i += 1) {
       if (num1 % i === 0 && num2 % i === 0) {
-        GCD = i;
+        gcd = i;
       }
     }
   }
-  return GCD.toString();
+  return gcd;
 };
 
 const description = 'Find the greatest common divisor of given numbers.';
@@ -29,7 +29,7 @@ const generateGameData = () => {
 
   const question = `${firstNumber} ${secondNumber}`;
 
-  correctAnswer = getGCD(firstNumber, secondNumber);
+  correctAnswer = getGCD(firstNumber, secondNumber).toString();
 
   return [question, correctAnswer];
 };
