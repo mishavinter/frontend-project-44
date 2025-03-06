@@ -1,4 +1,5 @@
-import { launchGameEngine, getRandomNumber } from '../index.js';
+import launchGameEngine from '../index.js';
+import getRandomNumber from '../getRandomNumber.js';
 
 const getOperator = () => {
   const signArray = ['+', '-', '*'];

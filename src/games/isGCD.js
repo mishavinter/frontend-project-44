@@ -1,4 +1,5 @@
-import { launchGameEngine, getRandomNumber } from '../index.js';
+import launchGameEngine from '../index.js';
+import getRandomNumber from '../getRandomNumber.js';
 
 const getGCD = (num1, num2) => {
   const minNumber = Math.min(num1, num2);
