@@ -29,7 +29,8 @@ const description = 'What number is missing in the progression?';
 const generateGameData = () => {
   const firstMember = getRandomNumber(0, 100);
   const diff = getRandomNumber(1, 30);
-  const progression = getProgression(firstMember, diff, 10);
+  const length = 10;
+  const progression = getProgression(firstMember, diff, length);
 
   const index = getRandomNumber(0, progression.length - 1);
   const correctAnswer = progression[index].toString();
