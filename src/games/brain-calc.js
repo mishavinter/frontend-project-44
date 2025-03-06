@@ -3,11 +3,12 @@ import getRandomNumber from '../getRandomNumber.js';
 
 const getOperator = () => {
   const signArray = ['+', '-', '*'];
-  const sign = signArray[getRandomNumber(0, signArray.length)];
+  const index = getRandomNumber(0, signArray.length);
+  const sign = signArray[index];
   return sign;
 };
 
-const estimateResult = (num1, num2, sign) => {
+const operateOnTwoNums = (num1, num2, sign) => {
   switch (sign) {
     case '+':
       return num1 + num2;
@@ -19,7 +20,7 @@ const estimateResult = (num1, num2, sign) => {
       return num1 * num2;
 
     default:
-      throw new Error('unknown operator');
+      throw new Error(`unknown operator: ${sign}`);
   }
 };
 
@@ -34,7 +35,7 @@ const generateGameData = () => {
 
   const question = `${firstNumber} ${sign} ${secondNumber}`;
 
-  correctAnswer = estimateResult(firstNumber, secondNumber, sign).toString();
+  correctAnswer = operateOnTwoNums(firstNumber, secondNumber, sign).toString();
 
   return [question, correctAnswer];
 };
