@@ -1,31 +1,37 @@
 import launchGameEngine from '../index.js';
 import getRandomNumber from '../getRandomNumber.js';
 
-const getProgression = (length) => {
-  const firstNumber = getRandomNumber(0, 100);
-  const diff = getRandomNumber(1, 30);
+const getProgression = (firstMember, diff, length) => {
   const progression = [];
 
   for (let i = 0; i < length; i += 1) {
-    progression.push(firstNumber + (i * diff));
+    progression.push(firstMember + (i * diff));
   }
 
   return progression;
 };
 
 const hideProgressionMember = (progression, index) => {
-  const newProgression = progression;
-  newProgression[index] = '..';
+  const headOfProgression = progression.slice(0, index);
+  const tailOfProgression = progression.slice(index + 1);
+  let hintedProgression = [];
+  if (index < progression.length - 1) {
+    hintedProgression = [...headOfProgression, '..', ...tailOfProgression];
+  } else {
+    hintedProgression = [...headOfProgression, '..'];
+  }
 
-  return progression;
+  return hintedProgression;
 };
 
 const description = 'What number is missing in the progression?';
 
 const generateGameData = () => {
-  const progression = getProgression(10);
+  const firstMember = getRandomNumber(0, 100);
+  const diff = getRandomNumber(1, 30);
+  const progression = getProgression(firstMember, diff, 10);
 
-  const index = getRandomNumber(0, progression.length);
+  const index = getRandomNumber(0, progression.length - 1);
   const correctAnswer = progression[index].toString();
 
   const progressionWithHintedMember = hideProgressionMember(progression, index);
