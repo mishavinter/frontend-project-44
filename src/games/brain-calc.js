@@ -29,8 +29,8 @@ const description = 'What is the result of the expression?';
 let correctAnswer = 0;
 
 const generateGameData = () => {
-  const firstNumber = getRandomNumber(0, 100);
-  const secondNumber = getRandomNumber(0, 100);
+  const firstNumber = getRandomNumber();
+  const secondNumber = getRandomNumber();
   const sign = getOperator();
 
   const question = `${firstNumber} ${sign} ${secondNumber}`;

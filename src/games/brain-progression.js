@@ -27,7 +27,7 @@ const hideProgressionMember = (progression, index) => {
 const description = 'What number is missing in the progression?';
 
 const generateGameData = () => {
-  const firstMember = getRandomNumber(0, 100);
+  const firstMember = getRandomNumber();
   const diff = getRandomNumber(1, 30);
   const length = 10;
   const progression = getProgression(firstMember, diff, length);

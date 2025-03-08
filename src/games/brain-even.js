@@ -13,7 +13,7 @@ const description = 'Answer "yes" if the number is even, otherwise answer "no".'
 let correctAnswer = '';
 
 const generateGameData = () => {
-  const question = getRandomNumber(0, 100);
+  const question = getRandomNumber();
   if (isEven(question)) {
     correctAnswer = 'yes';
   } else {

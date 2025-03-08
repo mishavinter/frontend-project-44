@@ -24,8 +24,8 @@ const description = 'Find the greatest common divisor of given numbers.';
 let correctAnswer = 0;
 
 const generateGameData = () => {
-  const firstNumber = getRandomNumber(0, 100);
-  const secondNumber = getRandomNumber(0, 100);
+  const firstNumber = getRandomNumber();
+  const secondNumber = getRandomNumber();
 
   const question = `${firstNumber} ${secondNumber}`;
 
