@@ -8,7 +8,7 @@ const getOperator = () => {
   return sign;
 };
 
-const operateOnTwoNums = (num1, num2, sign) => {
+const calculate = (num1, num2, sign) => {
   switch (sign) {
     case '+':
       return num1 + num2;
@@ -35,7 +35,7 @@ const generateGameData = () => {
 
   const question = `${firstNumber} ${sign} ${secondNumber}`;
 
-  correctAnswer = operateOnTwoNums(firstNumber, secondNumber, sign).toString();
+  correctAnswer = calculate(firstNumber, secondNumber, sign).toString();
 
   return [question, correctAnswer];
 };
