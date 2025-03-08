@@ -26,8 +26,6 @@ const calculate = (num1, num2, sign) => {
 
 const description = 'What is the result of the expression?';
 
-let correctAnswer = 0;
-
 const generateGameData = () => {
   const firstNumber = getRandomNumber();
   const secondNumber = getRandomNumber();
@@ -35,7 +33,7 @@ const generateGameData = () => {
 
   const question = `${firstNumber} ${sign} ${secondNumber}`;
 
-  correctAnswer = calculate(firstNumber, secondNumber, sign).toString();
+  const correctAnswer = calculate(firstNumber, secondNumber, sign).toString();
 
   return [question, correctAnswer];
 };
