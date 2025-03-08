@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import getHintedProgression from '../src/games/brain-progression.js';
+import launchProgressionGame from '../src/games/brain-progression.js';
 
-getHintedProgression();
+launchProgressionGame();
